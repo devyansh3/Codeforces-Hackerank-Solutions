@@ -1,0 +1,50 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define pb push_back
+typedef long long ll;
+ 
+ 
+void banana() {
+    ll test, count = 0;
+ 
+    cin >> test;
+ 
+    for(ll i=0;i<test;i++) {
+        ll x;
+        count = 0;
+        cin >> x;
+        vector <int> temp;
+        for(int i=0; i<x; i++ ){
+          int y ;
+          cin >> y;
+          temp.push_back(y);
+
+        }
+        for(ll j=0;j<x;j++) {
+            if(temp[j]==1&& j<x-1){
+              count++;
+            }
+            else{
+              break;
+            }
+          
+ 
+        }
+
+        
+        // cout << count << endl;
+        if(count%2==0) cout << "First" << endl;
+        else    cout << "Second" << endl;
+    }
+}
+
+ 
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+    cout.tie(NULL);
+ 
+    banana();
+ 
+    return 0;
+}
